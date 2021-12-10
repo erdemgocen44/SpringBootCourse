@@ -1,22 +1,18 @@
-package com.techpro.springboot_kurs;
+package springboot_kurs_controller_service;
 
 import org.springframework.stereotype.Component;
 
-// IOc Conrtaineren icinde  SpringBootun olusturdugu objelere bean denir
-//Component classtan obje olusturup IOC containeren icine yerlestirir
-//new StudentBean01() gibi fonksiyonu var
-// pojo class getter setter Constructer 
 @Component
-public class StudentBean01 implements StudentInterface {
+public class StudentBean03 {
 	private String name;
 	private int age;
 	private String id;
 
-	public StudentBean01() {
+	public StudentBean03() {
 		System.out.println("Constructor without parameter is used");
 	}
 
-	public StudentBean01(String name, int age, String id) {
+	public StudentBean03(String name, int age, String id) {
 		this.name = name;
 		this.age = age;
 		this.id = id;
@@ -51,10 +47,5 @@ public class StudentBean01 implements StudentInterface {
 		return "StudentBean01: name=" + name + ", age=" + age + ", id=" + id;
 	}
 
-	@Override
-	public String study() {
-		
-		return "StudentBean01 classından geliyorum";
-	}
-
+	
 }

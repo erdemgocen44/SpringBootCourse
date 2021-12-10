@@ -1,4 +1,4 @@
-package com.techpro.springboot_kurs;
+package springboot_kurs_controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
