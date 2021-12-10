@@ -2,12 +2,10 @@ package springboot_kurs_controller;
 
 import org.springframework.stereotype.Component;
 
-// IOc Conrtaineren icinde  SpringBootun olusturdugu objelere bean denir
-//Component classtan obje olusturup IOC containeren icine yerlestirir
-//new StudentBean01() gibi fonksiyonu var
-// pojo class getter setter Constructer 
-@Component
-public class StudentBean01 implements StudentInterface {
+@Component //@Component kullandiginiz class'dan obje olusturulur ve IOC Container'in icine konur 
+           //new StudentBean03(); gibi fonksiyonu var
+public class StudentBean01 implements StudentInterface{//Bean: IOC Container'in icinde SpringBoot'un olusturdugu objelere "Bean" denir
+
 	private String name;
 	private int age;
 	private String id;
@@ -25,36 +23,29 @@ public class StudentBean01 implements StudentInterface {
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public int getAge() {
 		return age;
 	}
-
 	public void setAge(int age) {
 		this.age = age;
 	}
-
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "StudentBean01: name=" + name + ", age=" + age + ", id=" + id;
+		return "StudentBean03: name=" + name + ", age=" + age + ", id=" + id;
 	}
 
 	@Override
 	public String study() {
-		
-		return "StudentBean01 classından geliyorum";
+		return "StudentBean03 class'indan geliyorum....";
 	}
-
 }
